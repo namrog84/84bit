@@ -1,25 +1,21 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    siteUrl: "https://www.84bit.com",
+    title: "84bit",
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: "namrog84",
+      summary: `84bit potato`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: "84bit website",
     social: {
-      twitter: `kylemathews`,
+      twitter: "namrog84",
     },
   },
   plugins: [
+    "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-theme-ui",
     `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
+    "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,9 +24,18 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        plugins: [
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+      __key: "images",
+    },
+    "gatsby-plugin-catch-links",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -50,22 +55,13 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-sharp`,
+      resolve: "gatsby-plugin-google-analytics",
       options: {
-        defaults: {
-          formats: [`auto`, `webp`, `avif`],
-          quality: 100,
-          placeholder: "blurred",
-        },
+        trackingId: "UA-44156606-1",
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -83,8 +79,8 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map((node) => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.nodes.map((node) => {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
                   date: node.frontmatter.date,
@@ -96,7 +92,7 @@ module.exports = {
             },
             query: `
               {
-                allMarkdownRemark(
+                allMdx(
                   sort: { order: DESC, fields: [frontmatter___date] },
                 ) {
                   nodes {
@@ -122,8 +118,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `84bit Starter Blog`,
+        short_name: `84bitshort`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
@@ -138,4 +134,9 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+};
+
+module.exports = {
+  siteMetadata: {},
+  plugins: [],
 };
