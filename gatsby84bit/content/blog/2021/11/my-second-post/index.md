@@ -12,3 +12,5 @@ egg yolk will be less rich."?
 ([Wikipedia Link](https://en.wikipedia.org/wiki/Salted_duck_egg))
 
 Yeah, I didn't either.
+
+![Chinese Salty Egg](./salty_egg.jpg)
