@@ -4,6 +4,7 @@
   "private": true,
   "description": "gatsby84bit",
   "author": "namrog84",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/namrog84/84bit/issues"
   },
@@ -38,12 +39,13 @@
     "gatsby-plugin-slug": "^2.0.0",
     "gatsby-plugin-slug-field": "^0.3.1",
     "gatsby-remark-copy-linked-files": "^5.2.0",
+    "gatsby-remark-graph": "^0.2.6",
     "gatsby-remark-images": "^6.2.0",
     "gatsby-remark-prismjs": "^6.2.0",
     "gatsby-remark-responsive-iframe": "^5.2.0",
     "gatsby-remark-smartypants": "^5.2.0",
     "gatsby-source-filesystem": "^4.2.0",
-    "gatsby-transformer-remark": "^5.2.0",
+    "gatsby-transformer-remark": "^5.17.0",
     "gatsby-transformer-sharp": "^4.2.0",
     "netlify-cms-app": "^2.15.59",
     "prismjs": "^1.25.0",
