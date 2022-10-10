@@ -106,7 +106,7 @@ const config = {
           {
             label: "About",
             type: "doc",
-            docId: "about",
+            docId: "intro",
             position: "left",
           },
           {
