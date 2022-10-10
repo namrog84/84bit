@@ -28,3 +28,19 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.markdown {
+  --ifm-heading-vertical-rhythm-bottom: 0.5;  /* default 1 */
+}
+
+table th, table td {
+  padding: 0.2rem; /*var(--ifm-table-cell-padding); defaults to 0.75rem ish*/ 
+}
+
+.markdown h1:first-child {
+  margin-bottom: 0.5rem; /* margin-bottom: calc( var(--ifm-h1-vertical-rhythm-bottom) * var(--ifm-leading) );*/
+}
+
+.markdown > h2 {
+  margin-top: 0.5rem; /*calc(var(--ifm-h2-vertical-rhythm-top) * var(--ifm-leading));*/
+}
