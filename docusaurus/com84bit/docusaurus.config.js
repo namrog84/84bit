@@ -39,16 +39,15 @@ const config = {
           onlyIncludeVersions: ["current"],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/namrog84/84bit/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/namrog84/84bit/tree/main/docusaurus/com84bit/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -64,18 +63,20 @@ const config = {
         id: "docs-unreal",
         path: "docs-unreal",
         routeBasePath: "docs-unreal",
+        editUrl: "https://github.com/namrog84/84bit/",
         sidebarPath: require.resolve("./sidebars.js"),
       },
     ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "docs-blender",
-        path: "docs-blender",
-        routeBasePath: "docs-blender",
-        sidebarPath: require.resolve("./sidebars.js"),
-      },
-    ],
+    // [
+    //   "@docusaurus/plugin-content-docs",
+    //   {
+    //     id: "docs-blender",
+    //     path: "docs-blender",
+    //     routeBasePath: "docs-blender",
+    //     editUrl: "https://github.com/namrog84/84bit/tree/main/docusaurus/com84bit/",
+    //     sidebarPath: require.resolve("./sidebars.js"),
+    //   },
+    // ],
   ],
 
   themeConfig:
@@ -93,11 +94,11 @@ const config = {
             to: "docs-unreal/intro",
             position: "left",
           },
-          {
-            label: "Blender",
-            to: "docs-blender/intro",
-            position: "left",
-          },
+          // {
+          //   label: "Blender",
+          //   to: "docs-blender/intro",
+          //   position: "left",
+          // },
           {
             label: "Blog",
             to: "/blog",
@@ -120,11 +121,11 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "Unreal Docs",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/intro",
+                label: "Unreal",
+                to: "/docs-unreal/intro",
               },
             ],
           },
@@ -132,29 +133,37 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
                 label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                href: "https://discord.gg/unreal-slackers",
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "Unreal Engine",
+                href: "https://www.unrealengine.com/en-US",
               },
+              {
+                label: "Unreal Forums",
+                href: "https://forums.unrealengine.com/",
+              },
+              {
+                label: "Unreal Learn",
+                href: "https://www.unrealengine.com/en-US/learn",
+              },
+              // {
+              //   label: "Twitter",
+              //   href: "https://twitter.com/docusaurus",
+              // },
             ],
           },
           {
             title: "More",
             items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
+              // {
+              //   label: "Blog",
+              //   to: "/blog",
+              // },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/namrog84/84bit/",
               },
             ],
           },
